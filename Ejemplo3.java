@@ -3,11 +3,11 @@ public class Ejemplo3 {
 
 	public static void main(String[] args) {
 	
-		int multiplo = 5;
+		int x = 5;
 		
 
 		
-		System.out.println(multiplo*multiplo);
+		System.out.println(x*x);
 		
 	}
 
