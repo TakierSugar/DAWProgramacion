@@ -1,7 +1,7 @@
 import java.util.Scanner;
 public class Ejemplo4 {
 	public static void main (String argv[]) {
-		float side;
+		float x;
 		float squareArea;
 		
 		System.out.println("Enter the side:");
@@ -10,9 +10,9 @@ public class Ejemplo4 {
 		
 		Scanner inputValue;
 		inputValue = new Scanner(System.in);
-		side = inputValue.nextFloat();
+		x = inputValue.nextFloat();
 		
-		squareArea = side * side;
+		squareArea = x * x;
 		System.out.println(squareArea);
 		inputValue.close();
 	}
