@@ -12,15 +12,18 @@ public class Ejemplo5 {
         System.out.println("Enter number 2:");
         Y = reader.nextInt();
 
+        reader.close();
+
         sum = X + Y;
         sub = X - Y;
         mult = X * Y;
         div = X / Y;
+        
         System.out.println("sum" + sum);
         System.out.println("subfraction" + sub);
         System.out.println("multiplicacion" + mult);
         System.out.println("division:" + div);
-        reader.close();
+        
         
     }
 }
