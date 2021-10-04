@@ -1,29 +1,25 @@
 import java.util.Scanner;
 public class Ejemplo5 {
     public static  void main (String argv[]){
-        int A;
-        int B;
-        int suma;
-        int resta;
-        int multiplicacion;
-        int division;
+        int X,Y;
+        int sum,sub,mult,div;
         Scanner reader = new Scanner(System.in);
 
         System.out.println("Enter number 1:");
-        A = reader.nextInt();
+        X = reader.nextInt();
         
 
         System.out.println("Enter number 2:");
-        B = reader.nextInt();
+        Y = reader.nextInt();
 
-        suma = A + B;
-        resta = A - B;
-        multiplicacion = A * B;
-        division = A / B;
-        System.out.println(suma);
-        System.out.println(resta);
-        System.out.println(multiplicacion);
-        System.out.println(division);
+        sum = X + Y;
+        sub = X - Y;
+        mult = X * Y;
+        div = X / Y;
+        System.out.println("sum" + sum);
+        System.out.println("subfraction" + sub);
+        System.out.println("multiplicacion" + mult);
+        System.out.println("division:" + div);
         reader.close();
         
     }
