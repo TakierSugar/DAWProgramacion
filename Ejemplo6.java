@@ -17,8 +17,6 @@ public class Ejemplo6 {
         Perimetro = 2 * Pi * A;
         System.out.println("El area es:" + Area); 
         System.out.println("El perimetro es:" + Perimetro); 
-     
-        
         reader.close();
         
     }
