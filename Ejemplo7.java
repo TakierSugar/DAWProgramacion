@@ -1,21 +1,21 @@
 import java.util.Scanner;
 public class Ejemplo7 {
     public static  void main (String argv[]){
-        double A;
-        double B;
+        double real;
+        double rebajado;
         
 
         Scanner reader = new Scanner(System.in);
 
         System.out.println("Precio base:");
-        A = reader.nextInt();
+        real = reader.nextInt();
         
 
         System.out.println("Precio rebajado:");
-        B = reader.nextInt();
+        rebajado = reader.nextInt();
 
         System.out.println("EL descuento es:");
-        System.out.println((((A-B)/A)*100)+"%");
+        System.out.println((((real - rebajado) / real) * 100) + "%");
         
         reader.close();
         
