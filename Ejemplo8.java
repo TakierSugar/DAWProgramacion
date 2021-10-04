@@ -7,10 +7,11 @@ public class Ejemplo8 {
         Scanner reader = new Scanner(System.in);
         System.out.println("Introduce la edad:");
         edad = reader.nextInt();
+        reader.close();
         
         if (edad >= 18){
-        System.out.println("");
-        reader.close();
+        System.out.println("Tienes la edad legal");
+        
 
          }
         
