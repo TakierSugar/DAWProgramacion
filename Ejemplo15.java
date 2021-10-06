@@ -8,7 +8,8 @@ public class Ejemplo15 {
 
         System.out.println("Inserta número del 1 al 10:");
         A = reader.nextInt();
-
+        reader.close();
+        
         switch (A) {
             case 1: System.out.println(1 + " " + "uno"); break;
             case 2: System.out.println(2 + " " + "dos"); break;
@@ -24,8 +25,6 @@ public class Ejemplo15 {
 
 
 
-        }
-        reader.close();
-        
+        } 
     }
 }
