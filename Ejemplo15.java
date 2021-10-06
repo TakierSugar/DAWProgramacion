@@ -25,7 +25,6 @@ public class Ejemplo15 {
 
 
         }
-        System.out.println(A);
         reader.close();
         
     }
