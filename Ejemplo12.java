@@ -9,9 +9,10 @@ public class Ejemplo12 {
 
         System.out.println("Inserta número:");
         A = reader.nextInt();
+
         System.out.println("Inserta número:");
         B = reader.nextInt();
-        
+        reader.close();
 
         if (A < B){
         System.out.println(B);
@@ -20,7 +21,7 @@ public class Ejemplo12 {
         System.out.println(A);
 
         }
-        reader.close();
+        
         
     }
 }
