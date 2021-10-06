@@ -10,15 +10,14 @@ public class Ejemplo11 {
         A = reader.nextInt();
         System.out.println("Inserta número:");
         B = reader.nextInt();
-        
+        reader.close();
 
         if (A > B){
         System.out.println(B);
         System.out.println(A);
         }else{
         System.out.println(A);
-        System.out.println(B);    }
-        reader.close();
-        
+        System.out.println(B);    
+        }
     }
 }
