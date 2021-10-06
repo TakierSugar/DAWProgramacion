@@ -5,17 +5,17 @@ public class Ejemplo9 {
        
         double edad;
         Scanner reader = new Scanner(System.in);
+        
         System.out.println("Introduce la edad:");
         edad = reader.nextInt();
+        reader.close();
         
         if (edad >= 18){
         System.out.println("Mayor de edad");
         }else{
         System.out.println("Menor de edad");
-        reader.close();
-
-         }
-        
         }
+        
+    }
 	
 }
