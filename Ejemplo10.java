@@ -6,7 +6,7 @@ public class Ejemplo10 {
         Scanner reader = new Scanner(System.in);
 
         System.out.println("Inserta número:");
-        A = reader.nextInt();
+        A = reader.nextDouble();
         reader.close();
 
         if (A >= 0){
