@@ -9,26 +9,26 @@ public class Ejemplo14 {
 
         System.out.println("Inserta número:");
         A = reader.nextInt();
-        
+        reader.close();
         
         if (A < 0){
-        System.out.println(A +" "+ "No es una nota valida");
+            System.out.println(A +" "+ "No es una nota valida");
         }else if (A < 3){
-        System.out.println(A +" "+ "Muy deficiente");
+            System.out.println(A +" "+ "Muy deficiente");
         }else if (A < 5){
-        System.out.println(A +" "+ "Insuficiente");
+            System.out.println(A +" "+ "Insuficiente");
         }else if (A < 6){
-        System.out.println(A +" "+ "Suficiente");
+            System.out.println(A +" "+ "Suficiente");
         }else if (A < 7){
-        System.out.println(A +" "+ "Bien");
+            System.out.println(A +" "+ "Bien");
         }else if (A < 9){
-        System.out.println(A +" "+ "Notable");
+            System.out.println(A +" "+ "Notable");
         }else if (A < 10){
-        System.out.println(A +" "+ "Sobresaliente");
+            System.out.println(A +" "+ "Sobresaliente");
         }else{
-        System.out.println(A +" "+ "No es una nota valida");
+            System.out.println(A +" "+ "No es una nota valida");
         }
-        reader.close();
+        
         
     }
 }
