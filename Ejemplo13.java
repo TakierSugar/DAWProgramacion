@@ -12,27 +12,26 @@ public class Ejemplo13 {
         
 
         System.out.println("Inserta número:");
-        A = reader.nextInt();
-        System.out.println("Inserta número:");
-        B = reader.nextInt();
-        System.out.println("Inserta un número positivo para ascendente, negativo para descendente (0 es positivo)");
-        Ascendente = reader.nextInt();
+        A = reader.nextDouble();
 
-        if (Ascendente >= 0){
+        System.out.println("Inserta número:");
+        B = reader.nextDouble();
+
+        System.out.println("Presiona 1 para ascendente, presiona 2 para descendente");
+        Ascendente = reader.nextDouble();
+
+        if (Ascendente == 1){
             if (A < B){
-                System.out.println(A);
-                System.out.println(B);
+                System.out.println(A + " " + B);
+
             }else{
-                System.out.println(B);
-                System.out.println(A);    
+                System.out.println(B + " " + A);
             }
-        }else{
+        }else if (Ascendente == 2){
             if (A > B){
-                System.out.println(A);
-                System.out.println(B);
+                System.out.println(B + " " + A);
             }else{
-                System.out.println(B);
-                System.out.println(A);
+                System.out.println(A + " " + B);
             }
         }
         reader.close();
