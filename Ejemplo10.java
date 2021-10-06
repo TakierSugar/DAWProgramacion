@@ -7,14 +7,12 @@ public class Ejemplo10 {
 
         System.out.println("Inserta número:");
         A = reader.nextInt();
-        
+        reader.close();
 
         if (A >= 0){
-        System.out.println("Es positivo");
+            System.out.println("Es positivo");
         }else{
-        System.out.println("Es negativo");
-    }
-        reader.close();
-        
+         System.out.println("Es negativo");
+        }    
     }
 }
