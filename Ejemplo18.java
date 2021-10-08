@@ -25,6 +25,9 @@ public class Ejemplo18 {
                 if (minutos >= 60){
                     horas = (horas + 1);
                     minutos = (minutos - 60); 
+                    if (horas == 24){
+                        horas = (horas - 24);
+                    }
                 }
         }
 
