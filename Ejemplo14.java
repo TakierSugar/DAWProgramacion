@@ -1,14 +1,14 @@
 import java.util.Scanner;
 public class Ejemplo14 {
     public static  void main (String argv[]){
-        double A;
+        byte A;
         
         
 
         Scanner reader = new Scanner(System.in);
 
         System.out.println("Inserta número:");
-        A = reader.nextInt();
+        A = reader.nextByte();
         reader.close();
         
         if (A < 0){
