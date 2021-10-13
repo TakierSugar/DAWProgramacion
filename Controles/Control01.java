@@ -1,3 +1,4 @@
+package Controles;
 import java.util.Scanner;
 
     public class Control01 {
@@ -18,14 +19,14 @@ import java.util.Scanner;
 
         System.out.println("Dime la longitud del lado del polígono:");
         longitud = reader.nextDouble();
+        reader.close();
         if (numero == 3){
             System.out.println("El perímetro del triángulo es " + (longitud*numero));
         }else if (numero == 4){
             System.out.println("El perímetro del cuadrado es " + (longitud*numero));
         }
-    }else{ System.out.println("Este numero de lados es invalido");
-
+    }else{
     }
-    reader.close();
+    
 }
 }
