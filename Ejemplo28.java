@@ -5,25 +5,33 @@ public class Ejemplo28 {
     public static void main(String[] args) {
         
         //Declaración de variables
-        int numero, contador = 0, i;
+        int numero, divisor = 2;
+        boolean esPrimo = true;
         Scanner reader = new Scanner (System.in);
+
         //Empieza el programa
         System.out.println("Número:");
         numero = reader.nextInt();
         reader.close();
 
-        for( i = 1 ; i <= numero ; i++){
-            if(numero%i==0){
-                contador++;
-            }
+        while ((divisor < numero) && esPrimo){
+
+            if ((numero%divisor)==0)
+                esPrimo = false;
+            
+            divisor++;
         }
-        if (contador==2){
-            System.out.println(numero + " " + "es un numero primo");
-        }else{
-            System.out.println(numero + " " + "no es un numero primo");
+        if (esPrimo == true){ 
+        
+        System.out.println(numero + " es primo");
+
+        }else if (esPrimo == false){
+
+        System.out.println(numero + " no es primo");
 
         }
 
+        
 
     }
         
