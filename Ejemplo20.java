@@ -12,7 +12,7 @@ public class Ejemplo20 {
         precio = reader.nextDouble();
         reader.close();
 
-        if (precio < 6){
+        if (precio <= 6){
             System.out.println("El articulo cuesta: " + precio);
         }else if (precio < 60){ 
             descuento = 0.95;

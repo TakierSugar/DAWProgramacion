@@ -12,9 +12,7 @@ public class Ejemplo21 {
         año = reader.nextInt();
         reader.close();
 
-        if (año < 0){
-            System.out.println("Este programa solo calcula años posteriores al año 0");
-        }
+       
         if ((año % 4 == 0 ) && ((año % 100 != 0 ) || (año % 400 == 0))){
             System.out.println("Este año es bisiesto");
         }else{
