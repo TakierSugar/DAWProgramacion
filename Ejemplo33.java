@@ -1,7 +1,5 @@
 import java.util.Scanner;
 
-import javax.sql.rowset.spi.SyncResolver;
-
 public class Ejemplo33 {
     
     public static void main(String[] args) {
