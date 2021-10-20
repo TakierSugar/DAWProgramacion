@@ -12,14 +12,14 @@ public class Ejemplo22 {
         for (int i = 0; i < 10; i++) {
             System.out.println("Dame un número:");
             numero = reader.nextInt();
-            reader.close();
+            
             if (numero >= 0) {
         
                 positivos = positivos + 1;
         
             }
         }
-        
+        reader.close();
         System.out.println("Hay" + " " + positivos + " " + "números positivos");
     }
 }
