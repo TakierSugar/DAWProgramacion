@@ -21,6 +21,7 @@ public class Ejemplo35 {
             total = total + nota;
 
         }
+        reader.close();
         System.out.println("Tu nota media es " + (total/10));
         System.out.println("Has sacado " + diez + " dieces");
     }   
