@@ -10,7 +10,7 @@ public class Ejemplo23 {
         //Empieza el programa
 
         do  {
-            System.out.println("Dame un número:");
+            System.out.println("Dame un número (Pulsa 0 para acabar)");
             numero = reader.nextInt();
 
             if (numero > 0) {
