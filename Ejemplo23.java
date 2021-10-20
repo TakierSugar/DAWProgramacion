@@ -20,6 +20,6 @@ public class Ejemplo23 {
 
         }while (numero != 0);
         reader.close();
-        System.out.println("Hay" + " " + positivos + " " + "números positivos");
+        System.out.println("Hay " + positivos + " números positivos");
     }
 }
