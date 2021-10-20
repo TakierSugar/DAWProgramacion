@@ -9,6 +9,7 @@ public class Ejemplo35 {
         int diez = 0;
         Scanner reader = new Scanner (System.in);
 
+        //Empieza el programa
         for (double nota : numero) {
 
             System.out.println("Dame una nota:");
