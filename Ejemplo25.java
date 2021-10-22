@@ -12,6 +12,7 @@ public class Ejemplo25 {
         System.out.println("Pideme un factorial");
         numero = reader.nextDouble();
 
+        if (numero>0){
         do{
             factorial = factorial * numero;
             numero--;
@@ -19,5 +20,6 @@ public class Ejemplo25 {
         
         reader.close();
         System.out.println("El resultado es" + factorial);
+        }
     }
 }
