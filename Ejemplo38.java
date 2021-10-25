@@ -11,7 +11,7 @@ public class Ejemplo38 {
         //inicia el programa
 
         System.out.println("Dime algo");
-        frase = reader.next();
+        frase = reader.nextLine();
         reader.close();
 
         for(int j = 0; j < frase.length(); j++){
