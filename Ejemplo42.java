@@ -17,6 +17,6 @@ public class Ejemplo42 {
         for (int i = 0 ; i < numero2 ; i++){
             multiplicacion=multiplicacion+numero1;
         } 
-        System.out.println(multiplicacion);
+        System.out.println("El resultado es " + multiplicacion);
     }  
 } 
