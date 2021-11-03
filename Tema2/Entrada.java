@@ -20,6 +20,7 @@ public class Entrada {
             }
             reader.nextLine();
         }
+        reader.close();
         return resultado;
     }   
 }
