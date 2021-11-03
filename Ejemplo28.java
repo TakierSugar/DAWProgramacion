@@ -29,11 +29,6 @@ public class Ejemplo28 {
 
         System.out.println(numero + " no es primo");
 
-        }
-
-        
-
-    }
-        
-
+        }        
+    }   
 }
