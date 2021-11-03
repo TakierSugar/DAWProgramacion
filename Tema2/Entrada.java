@@ -3,22 +3,23 @@ import java.util.Scanner;
 public class Entrada {
     public static int getInteger(){
         int resultado = 0;
-        String texto = "Pon un entero: ";
+        String mensaje = "Escriba un entero: ";
         Scanner reader = new Scanner(System.in);
+        boolean entero = false;
 
-        System.out.println(texto);
-
-        if (!reader.hasNextInt()){
-            do{
-            System.out.println("no es un entero, pon un entero: ");
-            resultado = reader.nextInt();
-            if(!reader.hasNextInt()){
-                continue;
+        System.out.println(mensaje);
+        while (!entero){
+            if(reader.hasNextLine() && reader.hasNextInt()){
+                resultado = reader.nextInt();
+                
+                entero = true;
             }else{
-            return resultado = reader.nextInt();}
-            }while (!reader.hasNextInt());
+                System.out.println("Este valor no es entero");
+                System.out.println(mensaje);
+                
+            }
+            reader.nextLine();
         }
-            
-        return resultado = reader.nextInt();
-    }    
+        return resultado;
+    }   
 }
