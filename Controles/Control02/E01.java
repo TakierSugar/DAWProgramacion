@@ -13,6 +13,7 @@ public class E01 {
         //comienza el programa
         System.out.println("Ingrese su nombre: ");
         nombre = reader.nextLine();
+        reader.close();
         System.out.println("Hola, " + nombre);
     }
     
