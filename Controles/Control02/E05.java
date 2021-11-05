@@ -12,7 +12,8 @@ public class E05 {
         //empieza el programa
         System.out.println("Ingrese numero: ");
         numero = reader.nextLine();
-        
+        reader.close();
+
         for (int x = numero.length() - 1; x >= 0; x--){
             invertido = invertido + numero.charAt(x);}
         System.out.println(invertido);    
