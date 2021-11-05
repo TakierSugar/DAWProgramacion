@@ -15,7 +15,8 @@ public class E09 {
         C2 = reader.nextInt();
         System.out.println("Ingrese nota laboratorio: ");
         NL = reader.nextInt();
-
+        reader.close();
+        
         Nc = ((NF-(NL*0.3))/0.7);
         C3 = (Nc*3)- C1 - C2;
 
