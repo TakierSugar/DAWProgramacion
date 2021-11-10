@@ -9,11 +9,11 @@ public class E09 {
         Scanner reader = new Scanner(System.in);
 
         //programa
-        System.out.println("Ingrese nota certamen 1: ");
+        System.out.print("Ingrese nota certamen 1: ");
         C1 = reader.nextInt();
-        System.out.println("Ingrese nota certamen 2: ");
+        System.out.print("Ingrese nota certamen 2: ");
         C2 = reader.nextInt();
-        System.out.println("Ingrese nota laboratorio: ");
+        System.out.print("Ingrese nota laboratorio: ");
         NL = reader.nextInt();
         reader.close();
         
