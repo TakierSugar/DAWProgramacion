@@ -7,7 +7,7 @@ public class Positivos {
         Scanner reader = new Scanner(System.in);
 
         for(int i = 0; i <7; i++){
-            System.out.println("Dame un número");
+            System.out.print("Dame un número ");
             numero[i] = reader.nextInt();
             if (numero[i]>0) positivos++;
         }
