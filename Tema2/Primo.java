@@ -7,7 +7,7 @@ public class Primo {
         Scanner reader = new Scanner (System.in);
         boolean primo;
         
-        System.out.println("Dame un número");
+        System.out.print("Dame un número: ");
         numero = reader.nextInt();
         reader.close();
         for (int i = 1; i < numero; i++){
@@ -15,7 +15,7 @@ public class Primo {
                 contador = contador + 1;
             }
         }
-        if (contador == 2){primo = false;     
+        if (contador >= 2){primo = false;     
         }else{ primo = true;
         }
         

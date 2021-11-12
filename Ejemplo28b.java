@@ -17,7 +17,7 @@ public class Ejemplo28b {
                 contador = contador + 1;
             }
         }
-        if (contador == 2){
+        if (contador >= 2){
             System.out.println(numero + " no es un número primo");
         }else{
             System.out.println(numero + " es un número primo");
