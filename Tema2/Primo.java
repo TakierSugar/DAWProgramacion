@@ -19,8 +19,10 @@ public class Primo {
         }else{ primo = true;
         }
         
-        if (primo = false){System.out.println(numero + " no es un número primo");
-        }else if(primo = true){System.out.println(numero + " es un número primo");
+        if (primo = false){
+            System.out.println(numero + " no es un número primo");
+        }else if(primo = true){
+            System.out.println(numero + " es un número primo");
         }
         return primo;
         
