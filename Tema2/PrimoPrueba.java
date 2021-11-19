@@ -1,3 +1,5 @@
+package Tema2;
+
 public class PrimoPrueba {
     public static void main(String[] args) {
         boolean resultado = Primo.esPrimo();

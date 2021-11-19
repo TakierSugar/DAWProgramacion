@@ -1,3 +1,5 @@
+package Tema2;
+
 public class ArgumentosSuma {
 
     //Declaración de variables
