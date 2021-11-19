@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch MayorDeTres",
+            "request": "launch",
+            "mainClass": "Tema2.MayorDeTres",
+            "projectName": "DAWProgramacion_4b96c5bf"
+        },
+        {
+            "type": "java",
             "name": "Launch Positivos2",
             "request": "launch",
             "mainClass": "Tema2.Positivos2",
