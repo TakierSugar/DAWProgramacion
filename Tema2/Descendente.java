@@ -1,13 +1,13 @@
 package Tema2;
 
 public class Descendente {
-    public static void ascendente(int a, int b){
+    public static void ascendente(int Valor1, int Valor2){
         //programa
         
-        if (a<b){
-            System.out.println(a + ", " + b);
-        }else if (a>b){
-            System.out.println(b + ", " + a);
+        if (Valor1<Valor2){
+            System.out.println(Valor1 + ", " + Valor2);
+        }else if (Valor1>Valor2){
+            System.out.println(Valor2 + ", " + Valor1);
         }
     }
         public static void main(String[] args) {
