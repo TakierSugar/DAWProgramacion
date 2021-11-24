@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Duplicados",
+            "request": "launch",
+            "mainClass": "Tema3.Duplicados",
+            "projectName": "DAWProgramacion_4b96c5bf"
+        },
+        {
+            "type": "java",
+            "name": "Launch Eliminar",
+            "request": "launch",
+            "mainClass": "Tema3.Eliminar",
+            "projectName": "DAWProgramacion_4b96c5bf"
+        },
+        {
+            "type": "java",
             "name": "Launch MayorDeTres",
             "request": "launch",
             "mainClass": "Tema2.MayorDeTres",
