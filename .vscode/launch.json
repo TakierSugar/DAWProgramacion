@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ParesImpares",
+            "request": "launch",
+            "mainClass": "Tema3.ParesImpares",
+            "projectName": "DAWProgramacion_4b96c5bf"
+        },
+        {
+            "type": "java",
+            "name": "Launch SumaIgual",
+            "request": "launch",
+            "mainClass": "Tema3.SumaIgual",
+            "projectName": "DAWProgramacion_4b96c5bf"
+        },
+        {
+            "type": "java",
             "name": "Launch Comunes",
             "request": "launch",
             "mainClass": "Tema3.Comunes",
