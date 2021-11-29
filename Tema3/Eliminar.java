@@ -1,23 +1,33 @@
 package Tema3;
 
-import java.util.Scanner;
-
 public class Eliminar {
-
     public static void main(String[] args) {
-        //variables
-        int[] elementos = {1,2,3,4,5,6,7};
-        int cambio;
-        Scanner reader = new Scanner (System.in);
 
-        //Programa
-        for (int i = 0; i<elementos.length; i++){
-            System.out.print(elementos[i] + ", ");
-            
+        int[] elementos = { 101, 102, 103, 104, 105, 106, 107, 108, 109, 110 };
+        int indice;
+
+        indice = obtenerIndice(elementos);
+
+        eliminarElemento(elementos, indice);
+        
+        Utilidades.mostrarArray(elementos);
+    }
+
+    public static int obtenerIndice(int[] elementos) {
+        int indice;
+        do {
+            indice = Utilidades.leerEntero("Índice de elemento a eliminar");
+        } while ((indice < 0) || (indice > (elementos.length - 1)));
+        return indice;
+    }
+
+    public static void eliminarElemento(int[] elementos, int indiceBorrar) {
+        int elementoBorrar = elementos[indiceBorrar];
+
+        for (int i = indiceBorrar + 1; i < elementos.length; i++) {
+            elementos[i - 1] = elementos[i];
         }
-        System.out.println("Dime el número que quieres mover al final");
-        cambio = reader.nextInt();
-        //elementos.remove(cambio);
 
+        elementos[elementos.length - 1] = elementoBorrar;
     }
 }
