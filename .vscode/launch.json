@@ -6,6 +6,27 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch HundirLaFlota",
+            "request": "launch",
+            "mainClass": "Tema3.HundirLaFlota",
+            "projectName": "DAWProgramacion_4b96c5bf"
+        },
+        {
+            "type": "java",
+            "name": "Launch Tablero",
+            "request": "launch",
+            "mainClass": "Tema3.Tablero",
+            "projectName": "DAWProgramacion_4b96c5bf"
+        },
+        {
+            "type": "java",
+            "name": "Launch ValoresACero",
+            "request": "launch",
+            "mainClass": "Tema3.ValoresACero",
+            "projectName": "DAWProgramacion_4b96c5bf"
+        },
+        {
+            "type": "java",
             "name": "Launch RellenaMatriz",
             "request": "launch",
             "mainClass": "Tema3.RellenaMatriz",
