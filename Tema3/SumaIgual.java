@@ -15,7 +15,7 @@ public class SumaIgual {
         lector.close();
 
         for (int i = 0; i <= numeros.length; i++){
-            for (int j = 0; j < numeros.length; j++){
+            for (int j = i+1; j < numeros.length; j++){
                 if( i + j == NumeroQuerido){
                     System.out.println(i + " + " + j + " = " + NumeroQuerido);
                 }

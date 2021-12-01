@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Comunes",
+            "request": "launch",
+            "mainClass": "Tema3.Comunes",
+            "projectName": "DAWProgramacion-2_a0c63ed"
+        },
+        {
+            "type": "java",
             "name": "Launch HundirLaFlota",
             "request": "launch",
             "mainClass": "Tema3.HundirLaFlota",
