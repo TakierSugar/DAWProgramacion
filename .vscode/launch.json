@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch ValoresACero",
+            "request": "launch",
+            "mainClass": "Tema3.ValoresACero",
+            "projectName": "DAWProgramacion-2_a0c63ed"
+        },
+        {
+            "type": "java",
+            "name": "Launch HundirLaFlota",
+            "request": "launch",
+            "mainClass": "Tema3.HundirLaFlota",
+            "projectName": "DAWProgramacion-2_a0c63ed"
+        },
+        {
+            "type": "java",
             "name": "Launch Tablero",
             "request": "launch",
             "mainClass": "Tema3.Tablero",

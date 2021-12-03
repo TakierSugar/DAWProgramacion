@@ -4,15 +4,19 @@ public class ValoresACero {
     public static void main(String[] args) {
         int[][] matriz = new int [10][10];
         String fila = "";
-        int contadorf = 0, contadorc = 0;
+        int contadorf = 0, contadorc = 0, contador1 = 0, contador = 0;
+        int valor;
+        boolean cero;
 
         for (int i = 0; i < matriz.length; i++){
             for (int j = 0; j < matriz.length; j++){
                 double aleatorio = Math.random();
-                if (aleatorio<=0.5){fila = fila + "0 ";}
-                else if (aleatorio>0.5){fila = fila + "1 ";}
+                if (aleatorio<=0.5){ matriz[i][j]=0; fila = fila + " " + matriz[i][j]; cero=true;}
+                else if (aleatorio>0.5){matriz[i][j]=1 ;fila = fila + " " + matriz[i][j]; cero=false;}
+                if (cero=true){contador++;}
             }
-            if (fila == "0 0 0 0 0 0 0 0 0 0 "){contadorf++;}
+            if (contador == 10){contadorf++;}
+            contador=0;
             System.out.println(fila);
             fila = "";
         }
