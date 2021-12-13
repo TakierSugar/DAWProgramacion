@@ -1,4 +1,4 @@
-package Tema3;
+
 
 public class Comunes {
     public static void main(String[] args) {

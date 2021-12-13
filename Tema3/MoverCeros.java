@@ -1,4 +1,3 @@
-package Tema3;
 
 
 public class MoverCeros {

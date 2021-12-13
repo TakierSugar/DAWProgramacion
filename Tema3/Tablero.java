@@ -1,4 +1,4 @@
-package Tema3;
+
 
 public class Tablero {
     public static void tablero(String[] args) {
