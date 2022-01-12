@@ -15,6 +15,7 @@ public class Longitud {
         int longitud = Utilidades.leerEntero("¿De que longitud son las palabras?");
 
         System.out.printf("La cadena contiene %d palabras de longitud %d", medirLongitud(palabras, longitud), longitud);
+        System.out.println(" ");
     }
 
 }
