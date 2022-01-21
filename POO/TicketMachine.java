@@ -103,8 +103,4 @@ public class TicketMachine
     {
         total = 0;
     }
-
-    public void setTotal(int total) {
-        this.total = total;
-    }
 }

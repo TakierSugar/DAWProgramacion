@@ -11,8 +11,9 @@ public class TicketMachineTest {
         T1.printTicket();
         T2.printTicket();
         T3 = new TicketMachine();
-        T3.setTotal(200);
+        T3.insertMoney(200);
         T3.printTicket();
         T3.empty();
+        T3.showPrice();
     }
 }
