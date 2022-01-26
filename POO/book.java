@@ -14,13 +14,12 @@ class Book
      * Set the author and title fields when this object
      * is constructed.
      */
-    public Book(String bookAuthor, String bookTitle, int bookPages, int bookBorrowed, boolean bookCourseText)
+    public Book(String bookAuthor, String bookTitle, int bookPages, boolean bookCourseText)
     {
         author = bookAuthor;
         title = bookTitle;
         pages = bookPages;
         refNumber = "";
-        borrowed = bookBorrowed;
         courseText = bookCourseText;
     }
 
