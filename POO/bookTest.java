@@ -5,5 +5,9 @@ public class bookTest {
         Book B1;
         B1 = new Book("Jose", "Tortillaaaaaaaas", 0, 12, true);
         B1.printDetails();
+        B1.setRefNumber("Esto deberia ser correcto");
+        B1.printDetails();
+        B1.setRefNumber("NO");
+        B1.printDetails();
     }
 }
