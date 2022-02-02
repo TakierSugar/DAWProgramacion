@@ -12,7 +12,8 @@ public class Ejemplo47 {
         for (int i = 0; i < cadenas.length; i++){
             cadenas[i] = miScanner.next();
         }
-            
+        miScanner.close();
     }
+    
 }
 
