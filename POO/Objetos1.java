@@ -1,3 +1,5 @@
+package POO;
+
 class alumno{
 
     private static int numAlumnos = 0;
@@ -43,7 +45,6 @@ class alumno{
         a1.preguntarDuda();
         a2.preguntarDuda();
         ImprimirInforme();
-        ImprimirInformeAlumno();
     }
 
 }

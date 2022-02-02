@@ -1,4 +1,4 @@
-
+package EjerciciosTema3;
 
 public class ParesImpares {
     public static void main(String[] args) {
