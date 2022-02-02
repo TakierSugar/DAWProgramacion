@@ -3,8 +3,8 @@ public class AnalizaString {
         public static void main(String[] args) {
         String cadena = "¡3 tristes tigres comen trigo en 1 trigal!";
         int contador_digitos = 0;
-        int contador_letras = 0;
-        int contador_simbolos = 0;
+        /*int contador_letras = 0;
+        int contador_simbolos = 0;*/
         System.out.println(cadena);
         cadena.toLowerCase();
         
