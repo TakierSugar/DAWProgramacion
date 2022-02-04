@@ -1,0 +1,24 @@
+En vuestro repositorio creais una carpeta llamada Control03
+
+Crea una clase teclado con los siguientes atributos privados: 
+-Color 
+-Número de teclas
+-Conectividad que indica si el teclado es inalambrico o por cable
+-Idioma representado por dos letras que representan el pais
+-Formato que puede tomar los valores "compacto" o "extendido"
+
+Crea los getters y setters apropiados teniendo en cuenta que una vez creado un teclado no se puede modificar sus atributos,
+pero si se pueden leer, crea tambien un contador que permita saber cuantos teclados se han ido creando en el sistema
+
+Crea una clase ordenador con los siguientes atributos privados:
+-Formato que puede tomar los valores sobremesa o portatil
+-Color
+-Teclado (objeto de la clase anterior)
+
+Crea los getters y setters apropiados teniendo en cuenta que solo el teclado puede 
+ser modificado despues de crear el ordenador
+
+Para las dos clases teneis que crear dos constructores, uno sin parametros y otro con valores especificados.
+
+Extra en la clase ordenador crear un metodo conectar y que recibe como parametro otro ordenador,
+de manera que un ordenador puede estar conectado a otro
