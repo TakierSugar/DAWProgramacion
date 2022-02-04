@@ -1,13 +1,14 @@
 package Controles.Control03;
 
 public class Teclado {
+    //Atributos
     private String color;
     private int n_teclas;
     private String conectividad;
     private String idioma; 
     private String formato;
     private int contador = 0;
-
+    //Getters
     public String getColor() {
         return color;
     }
@@ -26,7 +27,7 @@ public class Teclado {
     public int getContador() {
         return contador;
     }
-
+    //Constructores
     public Teclado(String color, int n_teclas, String conectividad, String idioma, String formato) {
         this.color = color;
         this.n_teclas = n_teclas;
@@ -35,11 +36,11 @@ public class Teclado {
         this.formato = formato;
         this.contador = contador++;
         if (conectividad != "cable" && conectividad != "inalambrico")
-        this.conectividad="cable";
+            this.conectividad="cable";
         if (idioma.length()>2)
-        this.idioma="ES";
+            this.idioma="ES";
         if (formato != "extendido" && formato != "compacto")
-        this.formato="extendido";
+            this.formato="extendido";
     }
     public Teclado(){
         this.color = "negro";
