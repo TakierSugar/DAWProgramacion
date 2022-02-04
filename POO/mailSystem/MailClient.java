@@ -30,9 +30,16 @@ public class MailClient
         }
     }
 
-    public void sendMailItem(String to, String message, String asunto)
-    {
-        MailItem item = new MailItem(user, to, message, asunto);
-        server.post(item);
+    public void sendMailItem(String to, String message, String asunto){
+        String[] partes = to.split(";");
+        for(int i = 0; i < to.split(";").length;i++){
+            MailItem item = new MailItem(user, partes[i], message, asunto);
+            server.post(item);
+        }
     }
-}
+
+    public void forwardLastMailItem(String forwardTo){
+        printNextMailItem();
+        user=forwardTo;
+    }
+}                   
