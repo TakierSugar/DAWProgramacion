@@ -1,0 +1,18 @@
+Usuario
+id
+email (U)
+password
+
+
+Media
+id
+nombre (U)
+contenido
+tipo 
+usuario_id (FK)(U) 
+
+Eliminar un media por nombre fichero
+Eliminar todos media de un tipo concreto
+-------------------------------------------------------------
+Eliminar un usuario por email. ----------> Eliminar sus media
+Eliminar usuarios de un dominio ( Ej: @gmail.com )
