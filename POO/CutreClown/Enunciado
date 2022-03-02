@@ -1,0 +1,11 @@
+Crear una interfaz que se llame ParserXML, dicha interfaz estrablece que tiene que tener un metodo
+{generateXML()
+Usuario generateXML()
+
+Imprimir por consola el XML para esa clase, para la clase usuario seria
+<usuario>
+    <id>  </id>
+    ·
+    ·
+    ·
+</usuario>
