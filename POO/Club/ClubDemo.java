@@ -28,10 +28,19 @@ public class ClubDemo
      */
     public void demo()
     {
-        club.join(new Membership("David", 2, 2004));
+        club.join(new Membership("David", 13, 2004));
         club.join(new Membership("Michael", 1, 2004));
         System.out.println("The club has " +
                            club.numberOfMembers() +
                            " members.");
+    }
+    public static void main(String[] args) {
+        try{
+            new Membership("David", 13, 2004);
+            new Membership("Michael", 1, 2004);
+            System.out.println("The club has " + " members.");
+        } catch (Exception e) {
+            System.out.println("Algo ha salido mal");
+        }
     }
 }

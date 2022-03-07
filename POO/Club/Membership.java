@@ -6,8 +6,7 @@ package POO.Club;
  * @author David J. Barnes and Michael Kölling
  * @version 2016.02.29
  */
-public class Membership
-{
+public class Membership{
     // The name of the member.
     private String name;
     // The month in which the membership was taken out.
