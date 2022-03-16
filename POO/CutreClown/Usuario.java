@@ -1,6 +1,16 @@
 package POO.CutreClown;
 
+import java.io.File;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.Objects;
+import javax.xml.parsers.DocumentBuilder;
+import javax.xml.parsers.DocumentBuilderFactory;
+import javax.xml.parsers.ParserConfigurationException;
+import org.w3c.dom.Document;
+import org.xml.sax.SAXException;
 
 public class Usuario implements ParserXML{
     private int id;
@@ -8,7 +18,6 @@ public class Usuario implements ParserXML{
     private String password;
     public static ArrayList<Usuario> list = new ArrayList<>();
     private static int idGenerator = 0;
-
     
     public Usuario(String email, String password) {
         
@@ -54,13 +63,91 @@ public class Usuario implements ParserXML{
         this.password = password;
     }
 
-    @Override
-    public String generateXML() {
-        String xml = "<usuario>";
-        xml += "<id>" + id + "</id>";
-        xml += "<email>" + email + "</email>";
-        xml += "<password>" + password + "</password>";
-        xml += "</usuario>";
-        return null; 
+    public static boolean removeOneByName(String email){
+
+        boolean resultado = false;
+
+        for (Usuario person : list) {
+            if (person.email.equals(email)){
+                list.remove(person);
+                resultado = true;
+                break;
+            }
+        }
+
+        return resultado;
     }
+
+    public static void removeAllByDomain(String domain){
+
+        Iterator<Usuario> it = list.iterator();
+
+        while(it.hasNext()){
+            Usuario user = it.next();
+
+            if (user.email.endsWith(domain)){
+                list.remove(user);
+            }
+        }
+
+    }
+    
+    public String generateXML() {
+        String xml = "<usuario>\n";
+        xml += "<id>" + id + "</id>\n";
+        xml += "<password>" + password + "</password>\n";
+        xml += "<email>" + email + "</email>\n";
+        xml += "</usuario>\n";
+        return xml;
+    }
+
+    public void writeXML(){  
+        String contenido = generateXML();
+        PrintWriter fichero = null; 
+        try{
+            fichero = new PrintWriter("DAWProgramacion-2/POO/CutreClown/Usuarios/Fichero"+getId()+".xml");
+        } catch (IOException e) {
+            e.printStackTrace();
+        } 
+        Objects.requireNonNull(fichero).println(contenido);
+        fichero.close();
+    }
+
+    public static void loadXML(){
+        File folder = new File("./usuarios");
+
+        list.clear();
+        
+        for (File xmlFile : folder.listFiles()) {
+            list.add(getLoadSingleXML(xmlFile));
+        }
+   }
+
+   private static Usuario getLoadSingleXML(File xmlFile) {
+
+       DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
+       DocumentBuilder dBuilder;
+       Document doc;
+       Usuario newUser = null;
+
+       try {
+           dBuilder = dbFactory.newDocumentBuilder();
+           doc = dBuilder.parse(xmlFile);
+           String email = doc.getElementsByTagName("email").item(0).getTextContent();
+           String password = doc.getElementsByTagName("password").item(0).getTextContent();
+           newUser = new Usuario(email, password);
+       } catch (ParserConfigurationException e) {
+           // TODO Auto-generated catch block
+           e.printStackTrace();
+       } catch (SAXException e) {
+           // TODO Auto-generated catch block
+           e.printStackTrace();
+       } catch (IOException e) {
+           // TODO Auto-generated catch block
+           e.printStackTrace();
+       }
+       
+       return newUser;
+   }
 }
+

@@ -3,7 +3,7 @@ package POO.CutreClown;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Media {
+public class Media implements ParserXML{
     private int id;
     private String nombre;
     private String contenido;
@@ -78,21 +78,19 @@ public class Media {
 
         return resultado;
     }
-    public enum MediaType {
-        AUDIO, VIDEO, IMAGE
-    }
 
     public static boolean removeOneByName(String nombre){
 
         boolean resultado = false;
 
-        for (Media mediaItem  : list) {
+        for (Media mediaItem : list) {
             if (mediaItem.nombre.equals(nombre)){
                 list.remove(mediaItem);
                 resultado = true;
                 break;
             }
         }
+
         return resultado;
     }
 
@@ -108,5 +106,27 @@ public class Media {
             }
         }
     }
-}
 
+    public static void removeAllByUserID(int id){
+        Iterator<Media> it = list.iterator();
+
+        while (it.hasNext()) {
+            Media media = it.next();
+
+            if(media.usuario.getId() == id){
+                it.remove();
+            }
+        }
+    }
+
+    public String generateXML() {
+        String xml = "<media>\n";
+        xml += "<id>" + id + "</id>\n";
+        xml += "<nombre>" + nombre + "</nombre>\n";
+        xml += "<contenido>" + contenido + "</contenido>\n";
+        xml += "<tipo>" + tipo + "</tipo>\n";
+        xml += usuario.generateXML();
+        xml += "</media>\n";
+        return xml;
+    }
+}
