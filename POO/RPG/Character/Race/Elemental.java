@@ -18,7 +18,7 @@ public class Elemental extends Race{
         stat.decrease(1);
         if (stat instanceof Dexterity)
         stat.increase(2);
-        return 0;
+        return stat.getValue();
     }
     
 }

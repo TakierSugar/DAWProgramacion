@@ -3,6 +3,7 @@ package POO.RPG.Character.Race;
 import POO.RPG.Character.Stat.Stat;
 
 public abstract class Race {
+
     //Devuelve el modificador de la raza segun el stat
     public abstract int modifier(Stat stat);    
 

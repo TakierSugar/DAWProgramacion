@@ -15,7 +15,7 @@ public class Orc extends Race{
         stat.increase(5);
         if (stat instanceof Constitution)
         stat.increase(3);
-        return 0;
+        return stat.getValue();
     }
     
 }

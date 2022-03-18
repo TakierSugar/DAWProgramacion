@@ -1,22 +1,21 @@
-package POO.RPG.Character.Race;
+package POO.RPG.Character.Job;
 
 import POO.RPG.Character.Stat.Constitution;
 import POO.RPG.Character.Stat.Dexterity;
+import POO.RPG.Character.Stat.Intelligence;
 import POO.RPG.Character.Stat.Stat;
-import POO.RPG.Character.Stat.Strength;
 
-public class Human extends Race{
+public class Archer extends Job{
 
     @Override
     public int modifier(Stat stat) {
         if (stat instanceof Dexterity)
-        stat.increase(1);
-        if (stat instanceof Strength)
+        stat.increase(4);
+        if (stat instanceof Intelligence)
         stat.increase(2);
         if (stat instanceof Constitution)
-        stat.increase(2);
+        stat.decrease(1);
         return stat.getValue();
     }
-    
     
 }

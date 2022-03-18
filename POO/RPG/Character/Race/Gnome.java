@@ -18,6 +18,6 @@ public class Gnome extends Race{
         stat.decrease(2);
         if (stat instanceof Dexterity)
         stat.increase(7);
-        return 0;
+        return stat.getValue();
     }
 }
