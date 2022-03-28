@@ -20,7 +20,7 @@ public abstract class Stat{
     }
     //Decrementa el valor de la caracteristica en 1
     public void decrease(int number){
-        value= value - number;
+        value = value - number;
     }
 
     @Override

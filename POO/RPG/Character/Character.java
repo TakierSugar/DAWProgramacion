@@ -1,18 +1,52 @@
 package POO.RPG.Character;
 
 import POO.RPG.Character.Job.Job;
+import POO.RPG.Character.Job.Warrior;
+import POO.RPG.Character.Race.Human;
 import POO.RPG.Character.Race.Race;
 import POO.RPG.Character.Stat.Dexterity;
 import POO.RPG.Character.Stat.Intelligence;
 import POO.RPG.Character.Stat.Stat;
 import POO.RPG.Character.Stat.Strength;
 
-public class Character {
+public class Character implements IDamageable{
+    @Override
+    public double maxHealth() {
+        double vidaMaxima = (5 + race.modifier(Constitution) + job.modifier(Constitution))*25; 
+        return vidaMaxima;
+    }
 
-    private static final Stat Dexterity = null;
-    private static final Stat Strength = null;
-    private static final Stat Intelligence = null;
-    private static final Stat Constitution = null;
+    @Override
+    public double health() {
+        double vida = maxHealth();
+        return vida;
+    }
+
+    @Override
+    public boolean isDead() {
+        if (health() >= 0) 
+        return true;
+        else 
+        return false;
+
+    }
+
+    @Override
+    public void receivesDamage(double amount) {
+        System.out.println(this.name +" received " +
+         amount + " damage. Health: " + health() + "/" +maxHealth());
+    }
+
+    @Override
+    public void heals(double amount) {
+        System.out.println(this.name +" healed " +
+        amount + " life. Health: " + health() + "/" +maxHealth());
+    }
+
+    private static Stat Dexterity;
+    private static Stat Strength;
+    private static Stat Intelligence;
+    private static Stat Constitution;
     String name;
     Race race;
     Job job;
@@ -72,9 +106,10 @@ public class Character {
     }
 
     public static void main(String[] args) {
-        Race Human;
-        Job Warrior;
-        Character Paco = new Character("Paco", Human, Warrior);
+        Race humano = new Human();
+        Job guerrero = new Warrior();
+        final Character Paco = new Character("Paco", humano, guerrero);
+        Paco.dexterity();
         Paco.toString();
     }
 
