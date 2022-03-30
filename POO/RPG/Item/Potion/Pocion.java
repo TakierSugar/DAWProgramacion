@@ -1,11 +1,12 @@
-package POO.RPG.Item.Food;
+package POO.RPG.Item.Potion;
 
 import POO.RPG.Character.Character;
+import POO.RPG.Item.Food.IConsumable;
 
-public abstract class Food implements IConsumable{
+public abstract class Pocion implements IConsumable{
     private int power;
 
-    public Food(int power){
+    public Pocion(int power){
         this.power = power;
     }
 

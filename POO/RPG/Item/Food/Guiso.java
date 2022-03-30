@@ -1,5 +1,7 @@
 package POO.RPG.Item.Food;
 
-public class Guiso {
-    
+public class Guiso extends Food{
+    public Guiso(){
+        super(75);
+    }
 }

@@ -9,13 +9,18 @@ public class Elf extends Race{
 
     @Override
     public int modifier(Stat stat) {
-        if (stat instanceof Dexterity)
-        stat.increase(3);
-        if (stat instanceof Intelligence)
-        stat.increase(3);
-        if (stat instanceof Constitution)
-        stat.decrease(1);
-        return stat.getValue();
+
+        int resultado = 0;
+        
+        if (stat instanceof Dexterity){
+            resultado = 3;
+        }else if (stat instanceof Intelligence){
+            resultado = 3;
+        }else if (stat instanceof Constitution){
+            resultado = -1;
+        }
+        
+        return resultado;
     }
     
 }

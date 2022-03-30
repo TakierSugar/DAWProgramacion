@@ -1,5 +1,7 @@
 package POO.RPG.Item.Food;
 
-public class Apple {
-    
+public class Apple extends Food{
+    public Apple() {
+        super(5);
+    } 
 }

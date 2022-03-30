@@ -8,11 +8,14 @@ public class Mage extends Job{
 
     @Override
     public int modifier(Stat stat) {
-        if (stat instanceof Dexterity)
-        stat.increase(1);
-        if (stat instanceof Intelligence)
-        stat.increase(4);
-        return stat.getValue();
+        int resultado = 0;
+        
+        if (stat instanceof Dexterity){
+            resultado = 1;
+        }else if (stat instanceof Intelligence){
+            resultado = 4;
+        }
+        
+        return resultado;
     }
-    
 }

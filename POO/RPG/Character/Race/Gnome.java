@@ -10,14 +10,19 @@ public class Gnome extends Race{
 
     @Override
     public int modifier(Stat stat) {
-        if (stat instanceof Intelligence)
-        stat.increase(2);
-        if (stat instanceof Strength)
-        stat.decrease(2);
-        if (stat instanceof Constitution)
-        stat.decrease(2);
-        if (stat instanceof Dexterity)
-        stat.increase(7);
-        return stat.getValue();
+
+        int resultado = 0;
+        
+        if (stat instanceof Strength){
+            resultado = -2;
+        }else if (stat instanceof Constitution){
+            resultado = -2;
+        }else if (stat instanceof Intelligence){
+            resultado = 2;
+        }else if (stat instanceof Dexterity){
+            resultado = 7;
+        }
+        
+        return resultado;
     }
 }

@@ -9,13 +9,18 @@ public class Orc extends Race{
 
     @Override
     public int modifier(Stat stat) {
-        if (stat instanceof Intelligence)
-        stat.decrease(3);
-        if (stat instanceof Strength)
-        stat.increase(5);
-        if (stat instanceof Constitution)
-        stat.increase(3);
-        return stat.getValue();
+
+        int resultado = 0;
+        
+        if (stat instanceof Strength){
+            resultado = 5;
+        }else if (stat instanceof Constitution){
+            resultado = 3;
+        }else if (stat instanceof Intelligence){
+            resultado = -3;
+        }
+        
+        return resultado;
     }
     
 }

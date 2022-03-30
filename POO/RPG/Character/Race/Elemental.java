@@ -10,15 +10,19 @@ public class Elemental extends Race{
 
     @Override
     public int modifier(Stat stat) {
-        if (stat instanceof Intelligence)
-        stat.increase(5);
-        if (stat instanceof Strength)
-        stat.decrease(1);
-        if (stat instanceof Constitution)
-        stat.decrease(1);
-        if (stat instanceof Dexterity)
-        stat.increase(2);
-        return stat.getValue();
+
+    int resultado = 0;
+    
+    if (stat instanceof Strength){
+        resultado = -1;
+    }else if (stat instanceof Constitution){
+        resultado = -1;
+    }else if (stat instanceof Intelligence){
+        resultado = 5;
+    }else if (stat instanceof Dexterity){
+        resultado = 2;
     }
     
+    return resultado;
+    }
 }

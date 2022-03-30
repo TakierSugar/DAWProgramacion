@@ -9,13 +9,17 @@ public class Tank extends Job{
 
     @Override
     public int modifier(Stat stat) {
-        if (stat instanceof Dexterity)
-        stat.decrease(1);
-        if (stat instanceof Strength)
-        stat.increase(3);
-        if (stat instanceof Constitution)
-        stat.increase(3);
-        return stat.getValue();
+        int resultado = 0;
+        
+        if (stat instanceof Dexterity){
+            resultado = -1;
+        }else if (stat instanceof Strength){
+            resultado = 3;
+        }else if (stat instanceof Constitution){
+            resultado = 3;
+        }
+        
+        return resultado;
     }
     
 }
