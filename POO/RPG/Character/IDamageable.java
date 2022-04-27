@@ -6,5 +6,4 @@ public interface IDamageable {
     boolean isDead();
     void receivesDamage(double amount);
     void heals(double amount);
-    
 }
