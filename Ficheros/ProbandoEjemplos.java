@@ -1,4 +1,4 @@
-package Ficheros;
+/*package Ficheros;
 
 import java.io.ByteArrayInputStream;
 import java.io.FileInputStream;
@@ -148,5 +148,5 @@ public class ProbandoEjemplos {
             }
         }
     }
-}*/
 }
+}*/
