@@ -1,26 +1,38 @@
 package Ficheros.ControlFicheros;
     
 public class Cliente extends Persona{
-    private int id;
+
+    private String id;
     private String email;
-    private String nif = getNif();
-    private String nombre = getNombre();
-    private String apellidos = getApellidos(); 
 
-    public String resultado = "---------------------\nid           " + id +"\nnif          " + nif + "\nnombre       " + nombre + "\napellidos    " + apellidos + "\nemail        " + email + "\n---------------------";
-    public String toString(){
-        return resultado;
-    }
-    public String infoCLiente = id + "," +nif + "," + nombre + "," + apellidos + "," + email + "\n";
-
-    public Cliente(int id, String email, String nif, String nombre, String apellidos) {
+    public Cliente(String nif, String nombre, String apellidos, String id, String email) {
+        super(nif, nombre, apellidos);
         this.id = id;
         this.email = email;
-        this.nif = nif;
-        this.nombre = nombre;
-        this.apellidos = apellidos;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    @Override
+    public String toString() {
+        return "nif:\t" + nif +
+                "nombre:\t" + nombre +
+                "apellidos:\t" + apellidos +
+                "id:\t" + id +
+                "email:\t" + email;
     }
 }
-    
-
-

@@ -1,24 +1,67 @@
 package Ficheros.ControlFicheros;
 
-import java.io.FileOutputStream;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class PersistenciaCliente {
-    public static void main(String[] args) throws IOException {
 
-        Cliente [] clientela = new Cliente[2];
-        Cliente cliente1 = new Cliente(1, "email", "nif", "nombre", "apellidos");
-        clientela [0] = cliente1;
-        Cliente cliente2 = new Cliente(2, "email", "nif", "nombre", "apellidos");
-        clientela [1] = cliente2;
+    private static final String nombreFichero = "clientes.dat";
 
-        FileOutputStream escritor = new FileOutputStream("DAWProgramacion-2/Ficheros/ControlFicheros/Clientes.dat");  
-        for(int i = 0 ; i < clientela.length; i++){
-            String text = cliente1.infoCLiente;
-            for (int j = 0; j < text.length(); j++){
-                escritor.write(text.charAt(j));
+    public void write(ArrayList<Cliente> clientes){
+
+        FileWriter ficheroEscritura;
+        BufferedWriter escritor;
+
+        try {
+            ficheroEscritura = new FileWriter(nombreFichero);
+            escritor = new BufferedWriter(ficheroEscritura);
+
+            for (Cliente cliente : clientes) {
+                String linea = cliente.getId() + "," +
+                                cliente.getNif() + "," +
+                                cliente.getNombre() + "," +
+                                cliente.getApellidos() + "," +
+                                cliente.getEmail() + "\n";
+                escritor.write(linea);
             }
+
+            escritor.close();
+
+        } catch (IOException e) {
+            e.printStackTrace();
         }
-        escritor.close();     
+
+    }
+
+    public ArrayList<Cliente> read(){
+
+        ArrayList<Cliente> resultado = new ArrayList<>();
+
+        FileReader ficheroLectura;
+        BufferedReader lector;
+        try {
+            ficheroLectura = new FileReader(nombreFichero);
+            lector = new BufferedReader(ficheroLectura);
+
+            String linea;
+
+            while ((linea = lector.readLine()) != null){
+                String [] trozos = linea.split(",");
+                Cliente cliente = new Cliente(trozos[1], trozos[2], trozos[3], trozos[0], trozos[4]);
+                resultado.add(cliente);
+            }
+            
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return resultado;
     }
 }
