@@ -1,0 +1,4 @@
+Instalar MySQL, PHPmiadmin, entrar en PHPmiadmin crear BDD llamada programacion y 
+dentro crear tabla cliente con los campos que vimos en el ejercicio persistenciaCliente. 
+Después ver que hay que hacer para hacer la conexion con la BDD y obtener todos los clientes 
+de la tabla
