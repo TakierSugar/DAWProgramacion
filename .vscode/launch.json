@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Duplicados",
+            "request": "launch",
+            "mainClass": "Tema3.EjerciciosTema3.Duplicados",
+            "projectName": "DAWProgramacion-2_a0c63ed"
+        },
+        {
+            "type": "java",
             "name": "Launch TestDB",
             "request": "launch",
             "mainClass": "BDD.TestDB",
