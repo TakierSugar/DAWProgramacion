@@ -1,4 +1,5 @@
-package EjerciciosTema3;
+package Tema3.EjerciciosTema3;
+
 
 public class RellenaMatriz {
     public static void main(String[] args) {

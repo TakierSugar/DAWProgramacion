@@ -1,4 +1,4 @@
-package EjerciciosTema3;
+package Tema3.EjerciciosTema3;
 
 public class Comunes {
     public static void main(String[] args) {
