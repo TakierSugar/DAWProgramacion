@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TestDB",
+            "request": "launch",
+            "mainClass": "BDD.TestDB",
+            "projectName": "DAWProgramacion-2_a0c63ed"
+        },
+        {
+            "type": "java",
+            "name": "Launch Conectar",
+            "request": "launch",
+            "mainClass": "BDD.Conectar",
+            "projectName": "DAWProgramacion-2_a0c63ed"
+        },
+        {
+            "type": "java",
             "name": "Launch Alumno",
             "request": "launch",
             "mainClass": "Alumno",
